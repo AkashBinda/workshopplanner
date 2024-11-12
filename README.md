@@ -9,8 +9,7 @@ Een universiteit wil een eenvoudige online applicatie waar studenten zich kunnen
 2. **Ingelogde studenten** kunnen workshops bekijken, zich inschrijven en hun eigen inschrijvingen beheren.
 3. De applicatie moet een **afgeschermd dashboard** bieden voor ingelogde gebruikers, waar studenten hun inschrijvingen en beheerders alle workshops kunnen beheren.
 
-### Tabellen
-
+### Tabellen (migrations en seeders zijn al gemaakt)
 1. **Users** - Voor het opslaan van studenten- en beheerdersgegevens.
    - Velden: `id`, `name`, `email`, `password`, `role` (bijv. 'admin' of 'student')
 2. **Workshops** - Voor het opslaan van de workshops die door de universiteit worden georganiseerd.
@@ -20,9 +19,9 @@ Een universiteit wil een eenvoudige online applicatie waar studenten zich kunnen
 
 ## Leeruitkomsten
 
-- **CRUD-functionaliteit:** De student leert hoe je basis-CRUD-operaties implementeert voor workshops en registraties.
+- **CRUD-functionaliteit:** De student leert hoe je basis-CRUD-operaties implementeert voor workshops en registraties. (admin)
 - **Authenticatie en autorisatie:** De student past authenticatie toe om toegang te beperken tot afgeschermde pagina’s en gebruikt rollen (bijv. admin/student) voor autorisatie.
-- **Livewire-componenten:** De student gebruikt Livewire om interactieve, dynamische functionaliteiten te implementeren, zoals het live tonen van ingeschreven workshops of het beheren van workshops in het dashboard.
+- **Livewire-componenten:** De student gebruikt Livewire om interactieve, dynamische functionaliteiten te implementeren. De student laat hierbij zien dat het inschrijven op een workshop via een livewire component gaat. (student)
 - **Relaties tussen tabellen:** De student leert hoe hij relaties (bijv. `hasMany`, `belongsTo`) implementeert tussen gebruikers, workshops, en registraties.
 
 ## Installatie-instructies
@@ -30,44 +29,26 @@ Een universiteit wil een eenvoudige online applicatie waar studenten zich kunnen
 Volg deze stappen om het project te klonen en lokaal op te zetten:
 
 1. **Kloon het project vanaf GitHub:**
-   ```bash
    git clone <repository-url>
    cd <repository-name>
-   ```
 
 2. **Installeer vereiste pakketten met Composer:**
-   ```bash
    composer install
-   ```
 
 3. **Maak een `.env` bestand:**
    - Dupliceer het `.env.example` bestand naar `.env`:
-     ```bash
-     cp .env.example .env
-     ```
+     copy .env.example .env
    - Pas de `.env` instellingen aan, zoals databaseconfiguratie, en vul een `APP_KEY` in.
 
 4. **Genereer een app-sleutel:**
-   ```bash
    php artisan key:generate
-   ```
 
-5. **Installeer npm packages en compileer assets:**
-   ```bash
-   npm install
-   npm run dev
-   ```
-
-6. **Voer de migraties uit:**
-   - Creëer de vereiste tabellen in de database:
-     ```bash
+6. **Voer de migraties en seeder uit:**
      php artisan migrate
-     ```
+     php artissan db:seed
 
 7. **Start de Laravel server:**
-   ```bash
    php artisan serve
-   ```
 
 8. **Open het project in je browser:**
    - Ga naar `http://localhost:8000` om de applicatie te bekijken.
