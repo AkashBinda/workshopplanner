@@ -17,6 +17,13 @@ Een universiteit wil een eenvoudige online applicatie waar studenten zich kunnen
 3. **Registrations** - Voor het bijhouden van studentregistraties voor workshops.
    - Velden: `id`, `user_id`, `workshop_id`, `registered_at`
 
+## Leerdoelen:
+1. **Workshopbeheer met CRUD:** De deelnemer implementeert een volledig CRUD-systeem voor workshops met behulp van een resource controller in Laravel. Dit beheergedeelte moet alleen toegankelijk zijn voor gebruikers met de rol admin.
+2. **Inschrijvingen met Livewire:** De deelnemer maakt een Livewire-component waarmee studenten zich kunnen inschrijven voor workshops. Dit zorgt voor een dynamische gebruikerservaring zonder paginavernieuwing.
+3. **Authenticatie en Rollenbeheer:** De deelnemer implementeert een inlogsysteem waarmee gebruikers zich kunnen aanmelden als student of admin. Afhankelijk van de rol worden zij doorverwezen naar de juiste secties van de applicatie.
+4. **Validatie van Invoer:** De deelnemer past standaard Laravel-validaties toe om invoer correct te controleren en te valideren voordat deze wordt opgeslagen.
+5. **Succes- en Foutmeldingen:** De deelnemer zorgt ervoor dat gebruikers duidelijke feedback ontvangen via succes- en foutmeldingen bij acties zoals inloggen, inschrijven of bewerken van gegevens.
+
 ## Leeruitkomsten
 
 - **CRUD-functionaliteit:** De student leert hoe je basis-CRUD-operaties implementeert voor workshops en registraties. (admin)
