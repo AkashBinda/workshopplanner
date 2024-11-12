@@ -29,18 +29,22 @@ Een universiteit wil een eenvoudige online applicatie waar studenten zich kunnen
 Volg deze stappen om het project te klonen en lokaal op te zetten:
 
 1. **Kloon het project vanaf GitHub:**
+   ```
    git clone <repository-url>
    cd <repository-name>
+   ```
 
-2. **Installeer vereiste pakketten met Composer:**
+3. **Installeer vereiste pakketten met Composer:**
+   ```
    composer install
+   ```
 
-3. **Maak een `.env` bestand:**
+4. **Maak een `.env` bestand:**
    - Dupliceer het `.env.example` bestand naar `.env`:
      copy .env.example .env
    - Pas de `.env` instellingen aan, zoals databaseconfiguratie, en vul een `APP_KEY` in.
 
-4. **Genereer een app-sleutel:**
+5. **Genereer een app-sleutel:**
    php artisan key:generate
 
 6. **Voer de migraties en seeder uit:**
