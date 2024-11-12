@@ -45,15 +45,21 @@ Volg deze stappen om het project te klonen en lokaal op te zetten:
    - Pas de `.env` instellingen aan, zoals databaseconfiguratie, en vul een `APP_KEY` in.
 
 5. **Genereer een app-sleutel:**
+   ```
    php artisan key:generate
+   ```
 
 6. **Voer de migraties en seeder uit:**
+   ```
      php artisan migrate
      php artissan db:seed
+   ```
 
 7. **Start de Laravel server:**
+   ```
    php artisan serve
-
+   ```
+   
 8. **Open het project in je browser:**
    - Ga naar `http://localhost:8000` om de applicatie te bekijken.
 
