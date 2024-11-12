@@ -52,7 +52,7 @@ Volg deze stappen om het project te klonen en lokaal op te zetten:
 6. **Voer de migraties en seeder uit:**
    ```
      php artisan migrate
-     php artissan db:seed
+     php artisan db:seed
    ```
 
 7. **Start de Laravel server:**
