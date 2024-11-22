@@ -15,10 +15,13 @@ class DatabaseSeeder extends Seeder
     {
         // User::factory(10)->create();
 
-        User::factory()->create([
+        User::updateOrCreate(
+        ['email' => 'test@example.com'], // Search by email
+        [
             'name' => 'Test User',
-            'email' => 'test@example.com',
-        ]);
+            'password' => bcrypt('password'), // Update other fields if the record exists
+        ]
+    );
 
         // create ten users
         User::factory(10)->create();
